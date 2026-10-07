@@ -1,0 +1,74 @@
+body {
+background-color: rgb(227, 124, 187);
+color:deeppink
+}
+
+
+h1 {
+font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+font-family: "Oswald", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+
+p {
+font-family: "Orbitron", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+
+table {
+width: 90%;
+}
+
+
+td {
+padding: 20px;
+}
+div.artistEntry {
+  padding: 20px;
+  margin: 100px;
+  border:10px solid rgb(99, 84, 84);
+  background-color:aqua;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* links in navbar */
+nav a {
+    color: rgb(130, 111, 111);
+    text-decoration: none;
+    background-color: rgb(241, 155, 230);
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #0f0;
+    font-size: 16px;
+}
+
+nav a:hover {
+  background-color: cornflowerblue;
+  font-size: 18px;
+}
+
+div.artistEntry:hover {
+  background-color: darkmagenta;
+}
+
+div.artistEntry img {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  background-color::rgb(99, 84, 84);
+  
+}
