@@ -1,0 +1,122 @@
+/* START border-box fix */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* END border-box fix */
+
+body {
+	background-color: #F6F1F7;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.container {
+  width: 90%;
+  margin: 0px auto;
+  background-color: #403844;
+}
+
+header, nav, main, aside, footer {
+	padding: 15px;
+}
+
+header {
+  background-color: #A99AC6;
+}
+
+/* START NAV STYLES */
+nav {
+	background-color: #A8B49A;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+nav ul {
+	padding: 0px;
+	margin: 0px;
+}
+nav ul li {
+	display: inline-block;
+	background-color: #F6F1F7;
+	width: 100px;
+	text-align: center;
+	padding: 10px 0px;
+	margin: 0px 20px 0px 0px;
+	border: solid 1px #403844;
+}
+/* END NAV STYLES */
+
+main {
+  background-color: #F6F1F7;
+  color: #403844;
+  float:left;
+  width: 70%;
+}
+
+main div.description img.thumbnail {
+	width: 100px;
+	border: solid 10px #A8B49A;
+	float: left;
+	margin: 0px 15px 5px 0px;
+}
+
+main div.description {
+  margin-bottom: 40px;
+}
+
+div.buttonAbsolute {
+	background-color: #A8B49A;
+	color: #403844;
+	position: absolute;
+	top: 0px;
+	right:150px;
+	padding: 20px;
+	border-radius: 125px;
+	z-index: 4;
+	opacity: 0.6;
+	width: 130px;
+	text-align: center;
+	
+}
+
+div.buttonAbsolute2 {
+	background-color: #A99AC6;
+	color: #403844;
+	position: absolute;
+	top: 0px;
+	right:260px;
+	border-radius: 200px;
+	padding: 20px;
+	z-index: 3;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+}
+
+div.buttonRelative {
+	background-color: #A8B49A;
+	color: #403844;
+	position: relative;
+	left: 115px;
+	width: 100px;
+	padding: 10px;
+	z-index: 5;
+}
+
+aside {
+  background-color: #A8B49A;
+  color: #403844;
+  float:left;
+  width: 30%;
+}
+footer {
+  background-color: #403844;
+  color: #F6F1F7;
+  float: none;
+  clear:both;
+}
