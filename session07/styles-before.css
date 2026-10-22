@@ -1,0 +1,201 @@
+/* START border-box fix */
+html {
+  box-sizing: border-box;
+}
+
+/* asterisk (*) symbol represents the universal selector. Its primary function is to select all elements of any type within the document. */
+
+/* :before is a pseudo-element used to insert content before the actual content of a selected element. It creates a "virtual" first child within the element, allowing you to style and add content that isn't directly present in your HTML markup. */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* END border-box fix */
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oswald:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /*  set max width of .container but display body as flex and center it's contents */
+  justify-content: center;
+  /*  this centers the contents of the body like .container */
+  background-color: #172B28;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Main title */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fb076d;
+}
+
+/* Add padding to all of the .container child elements */
+.container>* {
+  padding: 20px;
+}
+
+.container {
+  color: #f34d92;
+  display: flex;
+  /* use flex box */
+  flex-wrap: wrap;
+  /* wrap */
+  max-width: 1000px;
+  width: 100%;
+}
+
+header {
+  background: #bdd91d;
+  flex: 1 0 100%;
+  /* grow on, shrink off, span width of browser */
+  order: 1;
+  /* display order regardless of html structure */
+
+  /* POSITION STICKY */
+  /* position: sticky;
+  top: 0;
+  z-index: 1; */
+  border-bottom: 2px solid #bdd91d;
+}
+
+
+main {
+  background: #D6C8FF;
+  color: #172B28;
+  flex: 1 1 500px;
+  order: 3;
+}
+
+nav {
+  background: #bdd91d;
+  color: #050300fd;
+  flex: 1 0 200px;
+  /* grow but do not shrink less than basis */
+  order: 2;
+}
+
+aside {
+  background: #172B28;
+  color: #B6FFCE;
+  flex: 1 0 200px;
+  /* grow but do not shrink less than basis */
+  order: 4;
+  border: 2px solid #067b52;
+}
+
+footer {
+  background: #D6C8FF;
+  color: #172B28;
+  flex: 1 0 100%;
+  /* grow on, shrink off, span width of browser */
+  order: 5;
+}
+
+/* ARTIST GALLERY */
+.artist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.artist {
+  flex: 1 1 180px;
+  text-align: center;
+  background-color: #172B28;
+  padding: 12px;
+  border: 2px solid #0cf6a4;
+}
+
+.artist img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.artist a {
+  color: #B6FFCE;
+  text-decoration: none;
+}
+
+.artist h3 {
+  color: #D6C8FF;
+  font-family: 'Oswald', sans-serif;
+}
+
+.artist a:hover {
+  color: #F2EBDD;
+}
+
+.artist:hover {
+  background-color: #bdd91d;
+}
+
+/* NAVIGATION LINKS */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+  display: block;
+  background-color: #172B28;
+  color: #B6FFCE;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+nav a:hover {
+  background-color: #D6C8FF;
+  color: #172B28;
+}
+/* DJ_DAVE ARTIST PAGE */
+
+.artist-bio {
+  line-height: 1.7;
+}
+
+/* FLOATING IMAGE */
+.floating-image {
+  float: right;
+  width: 40%;
+  max-width: 320px;
+  height: auto;
+  margin: 8px 0 20px 24px;
+  border: 3px solid #0cf6a4;
+}
+
+/* Stop text from wrapping around the image */
+.clear-float {
+  clear: both;
+}
+
+/* Artist page links */
+main a {
+  color: #067b52;
+  font-weight: bold;
+}
+
+main a:hover {
+  color: #fb076d;
+}
