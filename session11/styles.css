@@ -1,0 +1,248 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background-color: #38251d;
+    color: #e6d2b5;
+}
+
+#page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #38251d;
+    background-image:
+        linear-gradient(90deg, #241710 2%, transparent 12%, transparent 88%, #241710 98%);
+    border-left: 12px solid #21140f;
+    border-right: 12px solid #21140f;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 5px;
+    font-size: 36px;
+    letter-spacing: 3px;
+    color: #e5c89d;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 0;
+    color: #b99a77;
+    font-style: italic;
+}
+
+
+/* BOOKSHELVES */
+
+.container {
+    position: absolute;
+    top: 130px;
+    width: 19%;
+    height: 65%;
+    background-color: #573725;
+    border: 8px solid #29190f;
+    box-sizing: border-box;
+    padding: 12px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px 5px;
+
+    z-index: 3;
+}
+
+#left-container {
+    left: 3%;
+}
+
+#right-container {
+    right: 3%;
+}
+
+.book-holder {
+    position: relative;
+    height: 100%;
+    border-bottom: 9px solid #8b6039;
+    background-color: #40271b;
+    box-sizing: border-box;
+}
+
+.book {
+    position: absolute;
+    height: 85%;
+    width: auto;
+    max-width: none;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: grab;
+    z-index: 5;
+}
+
+/* FIREPLACE */
+
+#fireplace {
+    position: absolute;
+    width: 30%;
+    height: 43%;
+    top: 170px;
+    left: 35%;
+    background-color: #78553a;
+    border: 12px solid #291a13;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Fireplace mantel */
+
+.fireplace-top {
+    position: absolute;
+    width: 120%;
+    height: 18px;
+    top: -25px;
+    left: -10%;
+    background-color: #8b5c36;
+    border: 4px solid #291a13;
+    box-sizing: border-box;
+}
+
+/* Stone surround */
+
+.fireplace-opening {
+    position: absolute;
+    width: 72%;
+    height: 75%;
+    bottom: 8%;
+    left: 14%;
+    background-color: #21150f;
+    border: 8px solid #493024;
+    border-radius: 45% 45% 4px 4px;
+    overflow: hidden;
+}
+
+/* Logs */
+
+.fireplace-opening::before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 12px;
+    bottom: 12%;
+    left: 12%;
+    background-color: #75442a;
+    transform: rotate(8deg);
+    border-radius: 10px;
+}
+
+.fireplace-opening::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 10px;
+    bottom: 16%;
+    left: 17%;
+    background-color: #98623b;
+    transform: rotate(-8deg);
+    border-radius: 10px;
+}
+
+/* Flames */
+
+.flame {
+    position: absolute;
+    width: 34px;
+    height: 65px;
+    bottom: 20%;
+    left: 38%;
+    background-color: #e87827;
+    border-radius: 50% 50% 25% 25%;
+    transform: rotate(45deg);
+}
+
+.flame::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    background-color: #f6b23e;
+    border-radius: 50% 50% 25% 25%;
+    top: 15px;
+    left: 6px;
+}
+
+.flame::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 24px;
+    background-color: #fff0a1;
+    border-radius: 50%;
+    top: 25px;
+    left: 12px;
+}
+
+/* Fireplace base */
+
+.fireplace-base {
+    position: absolute;
+    width: 120%;
+    height: 15px;
+    bottom: -22px;
+    left: -10%;
+    background-color: #8b5c36;
+    border: 4px solid #291a13;
+    box-sizing: border-box;
+}
+
+
+/* READING TABLE */
+
+#reading-table {
+    position: absolute;
+    width: 40%;
+    height: 19%;
+    bottom: 3%;
+    left: 30%;
+    background-color: #68432d;
+    border: 9px solid #29190f;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 2;
+}
+
+#reading-table h2 {
+    color: #e5c89d;
+    font-size: 18px;
+    margin-top: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* SMALL SCREEN ADJUSTMENTS */
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 22%;
+    }
+
+    #fireplace {
+        width: 32%;
+        left: 34%;
+    }
+
+    #reading-table {
+        width: 44%;
+        left: 28%;
+    }
+}
